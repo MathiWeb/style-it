@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Button from '../../UI/Button';
 import formStyle from './CourseInput.module.css';
 import ErrorModal from '../../UI/ErrorModal';
+//import Wrapper from '../../Helpers/Wrapper';
 
 const CourseInput = props => {
   const [enteredValue, setEnteredValue] = useState('');
@@ -36,7 +37,7 @@ const CourseInput = props => {
   };
 
   return (
-    <div>
+    <React.Fragment>
       {error && (
         <ErrorModal
           title={error.title}
@@ -54,7 +55,7 @@ const CourseInput = props => {
       </div>
       <Button type="submit">Add Goal</Button>
     </form>
-    </div>
+    </React.Fragment>
   );
 };
 
